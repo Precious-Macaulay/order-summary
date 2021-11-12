@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,500;0,700;0,900&display=swap");
+
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: "Red Hat Display", sans-serif;
+  color: var(--desaturated-blue);
+}
+body {
+  background-color: var(--pale-blue);
+}
+.background {
+  width: 100vw;
+  height: 100vh;
+  background: url(pattern-background-desktop.svg) no-repeat;
+  background-size: 100vw 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+.board {
+  height: 700px;
+  width: 450px;
+  border-radius: 25px;
+  background-color: white;
+}
+.logo-img {
+  border-radius: 25px 25px 0 0;
+  width: 100%;
+}
+.order {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 35px;
+}
+header {
+  font-weight: 900;
+  font-size: 28px;
+  color: var(--dark-blue);
+}
+.order-info {
+  width: 300px;
+  margin-top: 15px;
+}
+.order-info p {
+  text-align: center;
+}
+.Annual {
+  color: var(--dark-blue);
+  font-weight: 900;
+}
+.plan {
+  width: 76%;
+  height: 90px;
+  background-color: var(--very-pale-blue);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 30px;
+}
+.plan > img {
+  margin-left: 8%;
+}
+.plan > p {
+  margin-left: 5%;
+  font-size: 17px;
+  line-height: 1.6;
+}
+.plan > a {
+  margin-left: 20%;
+  font-weight: 700;
+}
+.proceed-btn {
+  font-weight: 900;
+  height: 50px;
+  width: 76%;
+  background-color: var(--bright-blue);
+  color: white;
+  border-radius: 10px;
+  margin-top: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  box-shadow: 0px 8px 20px -3px var(--desaturated-blue);
+}
+.cancel-btn {
+  font-weight: 900;
+  margin-top: 30px;
+}
+.cancel-btn > a {
+  text-decoration: none;
+  color: var(--desaturated-blue);
+}
+.plan > a:hover {
+  opacity: 70%;
+}
+.proceed-btn:hover {
+  opacity: 70%;
+}
+.cancel-btn:hover {
+  color: black;
+}
+@media screen and (max-width: 480px) {
+  .background {
+    background: url(pattern-background-mobile.svg) no-repeat;
+  }
+  .board {
+    width: 96%;
+    height: 96%;
+  }
+  .proceed-btn {
+    width: 90%;
+  }
+  .plan {
+    width: 90%;
+  }
+  .plan > a {
+    margin-left: 15%;
+  }
+}
